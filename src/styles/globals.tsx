@@ -23,13 +23,13 @@ export const Palette = {
   NEUTRAL_N4: '#E2E2EE',
   NEUTRAL_N5: '#F2F2F4',
   NEUTRAL_N6: '#FDFDFD',
-  BACKGROUND_BG: cssVar('BACKGOURN_BG'),
+  BACKGROUND_BG: cssVar('BACKGROUND_BG'),
   MODAL_BG: cssVar('MODAL_BG'),
   SYSTEM_ERROR: '#FF5D5D',
   SYSTEM_POSITIVE: '#49FF7C',
-  SUB_GREEN: '#B84040',
-  SUB_YELLOW: '#2FAD52',
-  SUB_RED: '#EEF5FD',
+  SUB_RED: '#B84040',
+  SUB_GREEN: '#2FAD52',
+  SUB_BLUE: '#EEF5FD',
   BLACK: '#000000',
   WHITE: '#ffffff',
 };
@@ -134,6 +134,24 @@ const style = css`
   button {
     cursor: pointer;
     outline: none;
+  }
+
+  body {
+    ${lightTheme};
+    background: ${Palette.BACKGROUND_BG};
+    transition: background 0.2s ease-in, color 0.2s ease-in;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      ${darkTheme}
+    }
+  }
+  body[data-theme='light'] {
+    ${lightTheme};
+  }
+  body[data-theme='dark'] {
+    ${darkTheme};
   }
 `;
 
