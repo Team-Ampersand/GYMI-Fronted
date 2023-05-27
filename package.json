@@ -26,6 +26,7 @@
   },
   "devDependencies": {
     "@emotion/babel-plugin": "^11.11.0",
+    "@svgr/webpack": "^8.0.1",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.8"
