@@ -2,11 +2,23 @@ import React from 'react';
 import { Global, css } from '@emotion/react';
 
 const lightTheme = `
+  --NEUTRAL_N1 : #292E3D;
+  --NEUTRAL_N2 : #656B80;
+  --NEUTRAL_N3 : #BBBBCC;
+  --NEUTRAL_N4 : #E2E2EE;
+  --NEUTRAL_N5 : #F2F2F4;
+  --NEUTRAL_N6: #FDFDFD;
   --BACKGROUND_BG : #FAFAFA;
   --MODAL_BG : #EEF5FD;
 `;
 
 const darkTheme = `
+  --NEUTRAL_N1 : #F4F4F4;
+  --NEUTRAL_N2 : #818198;
+  --NEUTRAL_N3 : #626274;
+  --NEUTRAL_N4 : #292930;
+  --NEUTRAL_N5 : #1E1E26;
+  --NEUTRAL_N6 : #010101;
   --BACKGROUND_BG : #171E32;
   --MODAL_BG: #4A4A50;
 `;
@@ -17,12 +29,12 @@ export const Palette = {
   PRIMARY_P1: '#1063EE',
   PRIMARY_P2: '#2575FC',
   PRIMARY_P3: '#558FF1',
-  NEUTRAL_N1: '#292E3D',
-  NEUTRAL_N2: '#656B80',
-  NEUTRAL_N3: '#BBBBCC',
-  NEUTRAL_N4: '#E2E2EE',
-  NEUTRAL_N5: '#F2F2F4',
-  NEUTRAL_N6: '#FDFDFD',
+  NEUTRAL_N1: cssVar('NEUTRAL_N1'),
+  NEUTRAL_N2: cssVar('NEUTRAL_N2'),
+  NEUTRAL_N3: cssVar('NEUTRAL_N3'),
+  NEUTRAL_N4: cssVar('NEUTRAL_N4'),
+  NEUTRAL_N5: cssVar('NEUTRAL_N5'),
+  NEUTRAL_N6: cssVar('NEUTRAL_N6'),
   BACKGROUND_BG: cssVar('BACKGROUND_BG'),
   MODAL_BG: cssVar('MODAL_BG'),
   SYSTEM_ERROR: '#FF5D5D',
@@ -120,7 +132,6 @@ const style = css`
     padding: 0;
     border: 0;
     box-sizing: border-box;
-    font-family: SUIT;
   }
   input:focus,
   select:focus,
