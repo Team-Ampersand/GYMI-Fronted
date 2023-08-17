@@ -16,7 +16,7 @@ const Button = styled.button`
   align-items: center;
   justify-content: center;
   gap: 0.6rem;
-  padding: 0.875rem 4.5rem;
+  padding: 0.875rem 4.3rem;
   background: #2e80cc;
   color: #fff;
   font-size: 1rem;
