@@ -11,7 +11,7 @@ on:
       - 'main'
 
 jobs:
-  WORKSPACE-CI:
+  GYMI-CI:
     runs-on: ubuntu-latest
 
     strategy:
