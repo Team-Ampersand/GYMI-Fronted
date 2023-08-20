@@ -1,6 +1,6 @@
 import Sidebar from 'components/common/organisms/Sidebar';
 
-const Home = () => {
+const Profile = () => {
   return (
     <>
       <Sidebar />
@@ -8,4 +8,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Profile;
