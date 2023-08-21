@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
-import { CommonTemplate } from 'components/common/templates/CommonTemplate/style';
 
-export const HomeTemplate = styled(CommonTemplate)`
+export const HomeTemplate = styled.div`
+  width: 100%;
+  height: 100vh;
   padding: 45px 38px;
   display: grid;
   gap: 20px 28px;
   grid-template-areas:
-    'status one three'
-    'status two four';
+    'status one two'
+    'status three four';
 `;
