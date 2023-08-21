@@ -2,9 +2,10 @@ import styled from '@emotion/styled';
 
 export const Layer = styled.div`
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 18px;
+  height: calc(100% - 57px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   padding: 24px;
-  justify-content: space-between;
+  gap: 12px;
 `;

@@ -1,17 +1,22 @@
 import HomeProfile from 'asset/svg/HomeProfile.svg';
 import * as S from './style';
 
-const CourtDetailUser = () => {
+interface Props {
+  name: string;
+  num: number;
+}
+
+const CourtDetailUser = ({ name, num }: Props) => {
   return (
     <S.Layer>
-      {true ? (
+      {name && num ? (
         <>
           <HomeProfile />
-          <S.Name>손정민</S.Name>
-          <S.StudentNum>3112</S.StudentNum>
+          <S.Name>{name}</S.Name>
+          <S.StudentNum>{num}</S.StudentNum>
         </>
       ) : (
-        <></>
+        <h3>예약하기</h3>
       )}
     </S.Layer>
   );

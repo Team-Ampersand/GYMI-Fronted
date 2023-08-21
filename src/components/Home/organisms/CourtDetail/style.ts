@@ -25,3 +25,15 @@ export const ReportBtn = styled.button`
   color: ${Palette.SUB_RED};
   background-color: transparent;
 `;
+
+export const TextBox = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -40px;
+  font-size: 24px;
+  font-weight: 500;
+`;
