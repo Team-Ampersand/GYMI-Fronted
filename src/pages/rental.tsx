@@ -4,7 +4,7 @@ import { MainTemplates } from 'components/common/templates/style';
 import CommonHeader from 'components/common/organisms/CommonHeader';
 import { CommonTemplate } from 'components/common/templates/CommonTemplate/style';
 
-const EquipmentPage = () => {
+const RentalPage = () => {
   return (
     <CommonTemplate>
       <SS />
@@ -22,4 +22,4 @@ const SS = styled.div`
   border: 1px solid #000;
 `;
 
-export default EquipmentPage;
+export default RentalPage;
