@@ -14,7 +14,7 @@ export const MenuData: menuListProps[] = [
     menuTitle: '공지사항',
   },
   {
-    routerName: '/equipment',
+    routerName: '/rental',
     menuTitle: '기자재 대여',
   },
 ];
