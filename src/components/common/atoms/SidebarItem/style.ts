@@ -36,17 +36,6 @@ export const Layer = styled.div<LayerType>`
           color: ${Palette.PRIMARY_P2};
         }
 
-        /* :nth-child(2n + 1) {
-          path {
-            fill: ${Palette.PRIMARY_P2};
-          }
-        }
-        :nth-child(2n) {
-          path {
-            stroke: ${Palette.PRIMARY_P2};
-          }
-        } */
-
         path {
           ${`${colorArea} : ${Palette.PRIMARY_P2}`}
         }
