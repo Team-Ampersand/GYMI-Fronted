@@ -3,14 +3,9 @@ import CourtDetail from 'components/Home/organisms/CourtDetail';
 import CourtReservationStatus from 'components/Home/organisms/CourtReservationStatus';
 import { HomeTemplate } from 'components/Home/templates/HomeTemplate/style';
 import { CommonTemplate } from 'components/common/templates/CommonTemplate/style';
+import Sidebar from 'components/common/organisms/Sidebar';
 
 const array = [1, 2, 3, 4];
-
-const Sidebar = styled.div`
-  width: 250px;
-  height: 100vh;
-  background-color: #ddd;
-`;
 
 const reservation: {
   name: string;
