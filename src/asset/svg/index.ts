@@ -9,6 +9,7 @@ import NoticeProfileIcon from 'asset/svg/NoticeProfileIcon.svg';
 import EmptyImg from 'asset/svg/EmptyImg.svg';
 import ModifyPen from 'asset/svg/ModifyPen.svg';
 import TrashCan from 'asset/svg/TrashCan.svg';
+import PlusIcon from 'asset/svg/PlusIcon.svg';
 
 export {
   BellIcon,
@@ -22,4 +23,5 @@ export {
   EmptyImg,
   ModifyPen,
   TrashCan,
+  PlusIcon,
 };

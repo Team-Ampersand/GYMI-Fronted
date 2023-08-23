@@ -1,10 +1,16 @@
 import * as S from './style';
 import { NoticeProfileIcon } from 'asset/svg';
 import EmptyImg from '../../../../asset/svg/EmptyImg.svg';
+import { useRecoilValue, useSetRecoilState } from 'recoil';
+import { noticeDetailId } from 'recoilAtoms';
+interface Props {
+  id: number;
+}
 
-const NoticeItem = () => {
+const NoticeItem = ({ id }: Props) => {
+  const setNoticeId = useSetRecoilState(noticeDetailId);
   return (
-    <S.Layer>
+    <S.Layer onClick={() => setNoticeId(id)}>
       <S.LeftSection>
         <S.UserInfo>
           <NoticeProfileIcon />
