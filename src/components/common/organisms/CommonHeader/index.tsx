@@ -1,4 +1,4 @@
-import { MenuData } from 'asset/data/MenuData';
+import { MenuData } from 'asset/data/SidebarMenuData';
 import { useRouter } from 'next/router';
 import * as S from './style';
 
@@ -8,7 +8,9 @@ const CommonHeader = () => {
   return (
     <S.HeaderWrapper>
       <S.Title>
-        {MenuData.filter((i) => pathname.includes(i.routerName))[0].menuTitle}
+        {pathname === '/'
+          ? '홈'
+          : MenuData.filter((i) => pathname.includes(i.url))[1].name}
       </S.Title>
     </S.HeaderWrapper>
   );
