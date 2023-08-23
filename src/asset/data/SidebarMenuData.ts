@@ -29,7 +29,7 @@ export const MenuData: MenuDataType[] = [
   },
   {
     icon: KeysIcon,
-    name: '기자재대여',
+    name: '기자재 대여',
     url: '/rental',
   },
 ];
