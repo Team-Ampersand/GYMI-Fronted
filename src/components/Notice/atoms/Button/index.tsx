@@ -2,14 +2,16 @@ import { ReactElement } from 'react';
 import { Layer } from './style';
 
 interface Props {
-  color: string;
+  bgColor: string;
+  color?: string;
   children: ReactElement;
   onClick?: () => void;
+  border?: string;
 }
 
-const Button = ({ color, children, onClick }: Props) => {
+const Button = ({ color, bgColor, children, onClick, border }: Props) => {
   return (
-    <Layer bgColor={color} onClick={onClick}>
+    <Layer bgColor={bgColor} onClick={onClick} border={border} color={color}>
       {children}
     </Layer>
   );
