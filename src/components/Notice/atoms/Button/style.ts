@@ -18,4 +18,5 @@ export const Layer = styled.button`
   justify-content: center;
   align-items: center;
   gap: 10px;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.1);
 `;

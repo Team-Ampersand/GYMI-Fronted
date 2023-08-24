@@ -12,4 +12,5 @@ export const MainWrapper = styled.div`
   display: flex;
   margin-top: 36px;
   justify-content: space-between;
+  position: relative;
 `;

@@ -8,6 +8,8 @@ export const Layer = styled.div`
   gap: 16px;
   padding: 24px;
   background-color: ${Palette.WHITE};
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
 `;
 
 export const TopWrapper = styled.div`

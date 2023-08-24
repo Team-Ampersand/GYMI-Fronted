@@ -2,7 +2,7 @@ import NoticeItem from 'components/Notice/molecules/NoticeItem';
 import { useEffect } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 import { noticeDeleteList, noticeStatus } from 'recoilAtoms';
-import { Layer } from './style';
+import * as S from './style';
 
 const NoticeList = () => {
   const notices = [1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -15,11 +15,12 @@ const NoticeList = () => {
   }, [status, setDeleteList]);
 
   return (
-    <Layer>
+    <S.Layer>
       {notices.map((notice, key) => (
         <NoticeItem key={key + 1} id={notice} />
       ))}
-    </Layer>
+      <S.FilterEffect />
+    </S.Layer>
   );
 };
 
