@@ -1,16 +1,31 @@
-import * as S from './style';
 import { NoticeProfileIcon } from 'asset/svg';
+import { useRecoilState, useRecoilValue, useSetRecoilState } from 'recoil';
+import { noticeDeleteList, noticeDetailId, noticeStatus } from 'recoilAtoms';
 import EmptyImg from '../../../../asset/svg/EmptyImg.svg';
-import { useRecoilValue, useSetRecoilState } from 'recoil';
-import { noticeDetailId } from 'recoilAtoms';
+import * as S from './style';
+
 interface Props {
   id: number;
 }
 
 const NoticeItem = ({ id }: Props) => {
   const setNoticeId = useSetRecoilState(noticeDetailId);
+  const status = useRecoilValue(noticeStatus);
+  const [deleteList, setDeleteList] = useRecoilState(noticeDeleteList);
+
+  const onClick = () => {
+    if (status === 'delete') {
+      if (deleteList.find((item) => item === id))
+        return setDeleteList(deleteList.filter((item) => item !== id));
+      setDeleteList([...deleteList, id]);
+    } else setNoticeId(id);
+  };
+
   return (
-    <S.Layer onClick={() => setNoticeId(id)}>
+    <S.Layer
+      onClick={onClick}
+      checked={status === 'delete' && deleteList.find((item) => item === id)}
+    >
       <S.LeftSection>
         <S.UserInfo>
           <NoticeProfileIcon />

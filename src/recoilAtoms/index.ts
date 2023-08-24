@@ -9,3 +9,8 @@ export const noticeDetailId = atom<number | null>({
   key: 'noticeDetailId',
   default: null,
 });
+
+export const noticeDeleteList = atom<Array<any>>({
+  key: 'noticeDeleteList',
+  default: [],
+});

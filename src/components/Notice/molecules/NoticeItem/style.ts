@@ -1,6 +1,10 @@
 import styled from '@emotion/styled';
 import { Palette } from 'styles/globals';
 
+interface LayerStyleProps {
+  checked: boolean;
+}
+
 export const Layer = styled.div`
   width: 100%;
   min-height: max-content;
@@ -9,6 +13,8 @@ export const Layer = styled.div`
   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.04);
   display: flex;
   justify-content: space-between;
+  border: ${({ checked }: LayerStyleProps) =>
+    `2px solid ${checked ? Palette.PRIMARY_P2 : 'transparent'}`};
 `;
 
 export const LeftSection = styled.div`
