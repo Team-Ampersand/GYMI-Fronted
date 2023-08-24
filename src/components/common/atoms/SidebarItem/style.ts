@@ -8,8 +8,10 @@ interface LayerType {
 }
 
 export const IconBox = styled.div`
+  position: relative;
   width: 22px;
   height: 22px;
+  top: -2px;
 `;
 
 export const NameBox = styled.div`
@@ -54,7 +56,7 @@ export const Layer = styled.div<LayerType>`
 `;
 
 export const ContentBox = styled.div`
-  width: 80%;
+  width: 90%;
   height: 100%;
   display: flex;
   align-items: center;
