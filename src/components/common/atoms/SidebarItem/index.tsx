@@ -5,9 +5,10 @@ interface Props {
   icon: JSX.Element;
   name: string;
   active: boolean;
+  show: boolean;
 }
 
-const SidebarItem = ({ icon, name, active }: Props) => {
+const SidebarItem = ({ icon, name, active, show }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const [colorArea, setColorArea] = useState('');
 
@@ -22,7 +23,7 @@ const SidebarItem = ({ icon, name, active }: Props) => {
     else setColorArea('stroke');
   }, []);
   return (
-    <S.Layer checked={active} colorArea={colorArea}>
+    <S.Layer checked={active} colorArea={colorArea} show={show}>
       <S.ContentBox>
         <S.IconBox ref={ref}>{icon}</S.IconBox>
         <S.NameBox>{name}</S.NameBox>

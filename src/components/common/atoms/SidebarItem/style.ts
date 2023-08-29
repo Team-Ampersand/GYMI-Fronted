@@ -5,6 +5,7 @@ import { Palette } from 'styles/globals';
 interface LayerType {
   checked: boolean;
   colorArea: string;
+  show: boolean;
 }
 
 export const IconBox = styled.div`
@@ -22,7 +23,7 @@ export const NameBox = styled.div`
 export const Layer = styled.div<LayerType>`
   width: 100%;
   height: 45px;
-  display: flex;
+  display: ${(props: LayerType) => (props.show ? 'flex' : 'none')};
   gap: 30px;
   position: relative;
   cursor: pointer;
