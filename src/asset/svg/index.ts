@@ -10,6 +10,7 @@ import EmptyImg from 'asset/svg/EmptyImg.svg';
 import ModifyPen from 'asset/svg/ModifyPen.svg';
 import TrashCan from 'asset/svg/TrashCan.svg';
 import PlusIcon from 'asset/svg/PlusIcon.svg';
+import Student from 'asset/svg/Student.svg';
 
 export {
   BellIcon,
@@ -24,4 +25,5 @@ export {
   ModifyPen,
   TrashCan,
   PlusIcon,
+  Student,
 };
