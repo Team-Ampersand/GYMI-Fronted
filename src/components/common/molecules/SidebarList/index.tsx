@@ -6,6 +6,8 @@ import * as S from './style';
 
 const SidebarList = () => {
   const { pathname } = useRouter();
+  const role = 'admin';
+
   return (
     <S.Layer>
       {MenuData.map((menu, key) => {
@@ -16,6 +18,7 @@ const SidebarList = () => {
                 icon={<menu.icon />}
                 name={menu.name}
                 active={pathname === menu.url}
+                show={menu.show.includes(role)}
               />
             </div>
           </Link>
