@@ -7,11 +7,7 @@ const CommonHeader = () => {
 
   return (
     <S.HeaderWrapper>
-      <S.Title>
-        {pathname === '/'
-          ? '홈'
-          : MenuData.filter((i) => pathname.includes(i.url))[1].name}
-      </S.Title>
+      <S.Title>{MenuData.find((i) => pathname === i.url)?.name}</S.Title>
     </S.HeaderWrapper>
   );
 };
