@@ -4,14 +4,16 @@ import { useState } from 'react';
 interface Props {
   url: string;
   method: string;
-  data: any;
+  data?: any;
 }
 
 export const useFetch = async ({ url, method, data: fetchData }: Props) => {
   const [data, setData] = useState();
-  const [error, setError] = useState();
+  const [error, setError] = useState<any>();
   const [isLoading, setLoading] = useState<boolean>(false);
 
+  // const fetch = useCallback(
+  //   async (fetchData: any) => {
   try {
     setLoading(true);
 
@@ -20,10 +22,20 @@ export const useFetch = async ({ url, method, data: fetchData }: Props) => {
       method: method,
       data: fetchData,
     });
+    setData(data);
   } catch (e: any) {
     setError(e);
   } finally {
     setLoading(false);
   }
-  return { data, error, isLoading };
+  //   },
+  //   [method, url]
+  // );
+
+  return {
+    data,
+    error,
+    isLoading,
+    // fetch
+  };
 };
