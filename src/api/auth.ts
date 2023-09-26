@@ -1,7 +1,9 @@
+import { useFetch } from 'hooks/useFetch';
 import { apiClient } from 'lib/apiClient';
 import setToken from 'lib/setToken';
 
 export const TokenReissue = async (refreshToken: string) => {
+  const { data } = await useFetch({ url: '/auth', method: 'patch' });
   try {
     const { data } = await apiClient.patch(
       '/auth',
@@ -13,10 +15,10 @@ export const TokenReissue = async (refreshToken: string) => {
       }
     );
     setToken(data.accessToken, data.refreshToken);
-    const accessToken: string = data.accessToken;
+    const newAccessToken: string = data.accessToken;
     refreshToken = data.refreshToken;
-    return { accessToken, refreshToken };
+    return { newAccessToken, refreshToken };
   } catch {
-    return { accessToken: '', refreshToken };
+    return { newAccessToken: '', refreshToken };
   }
 };

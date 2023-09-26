@@ -1,18 +1,17 @@
-import { InternalAxiosRequestConfig } from 'axios';
+import { TokenReissue } from 'api/auth';
+import { AxiosRequestConfig } from 'axios';
 import getToken from './getToken';
 
-interface TokenType {
-  accessToken: string | null;
-  refreshToken: string | null;
-}
+export const getRefresh = async (config: AxiosRequestConfig) => {
+  if (typeof window !== 'object' || !config.headers) return config;
 
-export const getRefresh = async (config: InternalAxiosRequestConfig) => {
-  if (typeof window !== 'object') return config;
+  const { accessToken, refreshToken } = await getToken();
 
-  const { accessToken, refreshToken }: TokenType = await getToken();
-
-  if (!config.headers['Authorization'])
-    config.headers['Authorization'] = `Bearer ${accessToken}`;
+  if (accessToken) config.headers['Authorization'] = `Bearer ${accessToken}`;
+  else if (!accessToken && config.url?.includes('/auth')) {
+    const { newAccessToken } = await TokenReissue(refreshToken || '');
+    config.headers['Authorization'] = `Bearer ${newAccessToken}`;
+  }
 
   return config;
 };
