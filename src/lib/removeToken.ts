@@ -1,4 +1,4 @@
-import { AccessToken, RefreshToken } from './localstorage';
+import { AccessToken, RefreshToken } from './localStorage';
 
 const removeToken = () => {
   localStorage.removeItem(RefreshToken);

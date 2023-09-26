@@ -1,4 +1,4 @@
-import { AccessToken, RefreshToken } from './localstorage';
+import { AccessToken, RefreshToken } from './localStorage';
 
 const setToken = (accessToken: string, refreshToken: string) => {
   localStorage.setItem(AccessToken, accessToken);
