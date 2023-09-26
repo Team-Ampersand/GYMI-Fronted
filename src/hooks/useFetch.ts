@@ -12,8 +12,6 @@ export const useFetch = async ({ url, method, data: fetchData }: Props) => {
   const [error, setError] = useState<any>();
   const [isLoading, setLoading] = useState<boolean>(false);
 
-  // const fetch = useCallback(
-  //   async (fetchData: any) => {
   try {
     setLoading(true);
 
@@ -28,14 +26,6 @@ export const useFetch = async ({ url, method, data: fetchData }: Props) => {
   } finally {
     setLoading(false);
   }
-  //   },
-  //   [method, url]
-  // );
 
-  return {
-    data,
-    error,
-    isLoading,
-    // fetch
-  };
+  return { data, error, isLoading };
 };
